@@ -18,11 +18,11 @@ jobs:
         with:
           node-version: 20
 
-- name: Install dependencies
-  run: npm ci
+      - name: Install dependencias
+        run: npm install
 
-- name: Fix permissions
-  run: chmod +x ./node_modules/.bin/jest
+      - name: Fix permissions
+        run: chmod +x ./node_modules/.bin/jest
 
-- name: Run tests
-  run: npm test
+      - name: Run testes
+        run: npx test
